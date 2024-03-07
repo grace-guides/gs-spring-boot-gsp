@@ -1,0 +1,45 @@
+plugins {
+	id 'groovy'
+	id 'org.springframework.boot'
+	id 'io.spring.dependency-management'
+	id 'org.graceframework.grace-web'
+	id 'org.graceframework.grace-gsp'
+}
+
+ext['spring-boot.version'] = springBootVersion
+ext['tomcat.version'] = tomcatVersion
+
+group = 'org.graceframework.guides'
+version = projectVersion
+
+java {
+	sourceCompatibility = '11'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.graceframework:grace-boot'
+	implementation 'org.graceframework:grace-core'
+	implementation 'org.graceframework:grace-plugin-core'
+	implementation 'org.graceframework:grace-plugin-i18n'
+	implementation 'org.graceframework:grace-plugin-gsp', {
+		exclude module: 'grace-plugin-url-mappings'
+	}
+	implementation 'org.graceframework:grace-web-url-mappings'
+	implementation 'org.codehaus.groovy:groovy'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.named('bootRun') {
+	jvmArgs('-Dspring.output.ansi.enabled=always')
+}
+
+tasks.named('bootJar') {
+	classpath "${project.buildDir}/gsp-classes"
+}
