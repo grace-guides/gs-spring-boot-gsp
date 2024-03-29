@@ -4,6 +4,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+        if (projectVersion.endsWith('-SNAPSHOT')) {
+            maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
+        }
     }
     plugins {
         id 'org.springframework.boot' version springBootVersion
@@ -17,6 +20,9 @@ dependencyResolutionManagement {
     repositories {
         mavenLocal()
         mavenCentral()
+        if (projectVersion.endsWith('-SNAPSHOT')) {
+            maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
+        }
     }
 }
 
