@@ -13,7 +13,7 @@ group = 'org.graceframework.guides'
 version = projectVersion
 
 java {
-	sourceCompatibility = '11'
+	sourceCompatibility = '17'
 }
 
 dependencies {
@@ -23,11 +23,8 @@ dependencies {
 	implementation 'org.graceframework:grace-core'
 	implementation 'org.graceframework:grace-plugin-core'
 	implementation 'org.graceframework:grace-plugin-i18n'
-	implementation 'org.graceframework:grace-plugin-gsp', {
-		exclude module: 'grace-plugin-url-mappings'
-	}
-	implementation 'org.graceframework:grace-web-url-mappings'
-	implementation 'org.codehaus.groovy:groovy'
+	implementation 'org.graceframework:grace-plugin-gsp'
+	implementation 'org.apache.groovy:groovy'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        mavenLocal()
         mavenCentral()
         gradlePluginPortal()
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
@@ -14,6 +15,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 }
