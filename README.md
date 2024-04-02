@@ -4,7 +4,7 @@ This guide show you how to use GSP as view templates with Spring Boot.
 
 ## Grace Version
 
-- Grace Framework **2022.2.0**
+- Grace Framework **2023.0.0-M5**
 
 ## Usage
 
@@ -14,20 +14,31 @@ Adding `grace-plugin-gsp` plugin to the `build.gradle`,
 
 ```gradle
 dependencies {
-	implementation "org.graceframework:grace-boot"
-	implementation "org.graceframework:grace-core"
-	implementation "org.graceframework:grace-plugin-core"
-	implementation "org.graceframework:grace-plugin-i18n"
-	implementation "org.graceframework:grace-plugin-gsp", {
-		exclude module: 'grace-plugin-url-mappings'
-	}
-	implementation "org.graceframework:grace-web-url-mappings"
+	implementation 'org.graceframework:grace-boot'
+	implementation 'org.graceframework:grace-core'
+	implementation 'org.graceframework:grace-plugin-core'
+	implementation 'org.graceframework:grace-plugin-i18n'
+	implementation 'org.graceframework:grace-plugin-gsp'
 }
 
 ```
 
+Grace will only load 3 plugins that are dependent on `gsp`,
+
+```bash
+----------------------------------------------------------------------------------------------
+Order      Plugin Name                              Plugin Version                     Enabled
+----------------------------------------------------------------------------------------------
+    1      Core                                     2023.0.0-M5                              Y
+    2      I18n                                     2023.0.0-M5                              Y
+    3      Codecs                                   2023.0.0-M5                              Y
+    4      GroovyPages                              2023.0.0-M5                              Y
+----------------------------------------------------------------------------------------------
+```
+
 ### Using GSP template
 
+Creating `index.gsp` in `app/views/greeting/`, now you can use GSP taglibs,
 
 ```html
 <!DOCTYPE HTML>
@@ -49,7 +60,7 @@ dependencies {
 ./gradlew bootRun
 ```
 
-then open your browser, `http://localhost:8080`
+then open your browser, `http://localhost:8080/greeting`
 
 ## Links
 
