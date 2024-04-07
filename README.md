@@ -4,7 +4,7 @@ This guide show you how to use GSP as view templates with Spring Boot.
 
 ## Grace Version
 
-- Grace Framework **2022.2.0**
+- Grace Framework **2022.2.4**
 
 ## Usage
 
@@ -14,16 +14,12 @@ Adding `grace-plugin-gsp` plugin to the `build.gradle`,
 
 ```gradle
 dependencies {
-	implementation "org.graceframework:grace-boot"
-	implementation "org.graceframework:grace-core"
-	implementation "org.graceframework:grace-plugin-core"
-	implementation "org.graceframework:grace-plugin-i18n"
-	implementation "org.graceframework:grace-plugin-gsp", {
-		exclude module: 'grace-plugin-url-mappings'
-	}
-	implementation "org.graceframework:grace-web-url-mappings"
+	implementation 'org.graceframework:grace-boot'
+	implementation 'org.graceframework:grace-core'
+	implementation 'org.graceframework:grace-plugin-core'
+	implementation 'org.graceframework:grace-plugin-i18n'
+	implementation 'org.graceframework:grace-plugin-gsp'
 }
-
 ```
 
 ### Using GSP template
