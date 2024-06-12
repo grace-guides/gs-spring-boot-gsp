@@ -6,7 +6,7 @@ This guide show you how to use GSP as view templates with Spring Boot.
 
 ## Grace Version
 
-- Grace Framework **2023.0.0-M5**
+- Grace Framework **2023.0.0-M7**
 
 ## Usage
 
