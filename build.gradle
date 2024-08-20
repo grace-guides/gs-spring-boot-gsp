@@ -6,9 +6,6 @@ plugins {
 	id 'org.graceframework.grace-gsp'
 }
 
-ext['spring-boot.version'] = springBootVersion
-ext['tomcat.version'] = tomcatVersion
-
 group = 'org.graceframework.guides'
 version = projectVersion
 
