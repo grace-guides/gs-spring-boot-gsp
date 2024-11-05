@@ -3,7 +3,7 @@
 [![Grace on X](https://img.shields.io/twitter/follow/graceframework?style=social)](https://twitter.com/graceframework)
 
 [![Groovy Version](https://img.shields.io/badge/Groovy-4.0.23-blue?style=flat&color=4298b8)](https://groovy-lang.org/releasenotes/groovy-4.0.html)
-[![Grace Version](https://img.shields.io/badge/Grace-2023.1.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2023.1.0-M2)
+[![Grace Version](https://img.shields.io/badge/Grace-2023.1.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2023.1.0-M3)
 [![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-3.3.5-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases)
 
 
@@ -24,7 +24,6 @@ Adding `grace-plugin-gsp` plugin to the `build.gradle`,
 ```gradle
 dependencies {
 	implementation 'org.graceframework:grace-boot'
-	implementation 'org.graceframework:grace-core'
 	implementation 'org.graceframework:grace-plugin-core'
 	implementation 'org.graceframework:grace-plugin-i18n'
 	implementation 'org.graceframework:grace-plugin-gsp'
@@ -83,33 +82,33 @@ gs-spring-boot-gsp  ./gradlew bootRun
 
  :: Spring Boot ::                (v3.3.5)
 
-2024-10-25T16:17:24.128+08:00  INFO 13834 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.12 with PID 13834 (/Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp)
-2024-10-25T16:17:24.129+08:00  INFO 13834 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-10-25T16:17:24.150+08:00  INFO 13834 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-25T16:17:24.150+08:00  INFO 13834 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-25T16:17:24.591+08:00  INFO 13834 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 48 ms
-2024-10-25T16:17:24.850+08:00  INFO 13834 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-25T16:17:24.857+08:00  INFO 13834 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-25T16:17:24.857+08:00  INFO 13834 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-25T16:17:24.878+08:00  INFO 13834 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-25T16:17:24.879+08:00  INFO 13834 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
-2024-10-25T16:17:25.236+08:00  INFO 13834 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-25T16:17:25.242+08:00  INFO 13834 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
-2024-10-25T16:17:25.360+08:00  INFO 13834 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-25T16:17:25.391+08:00  INFO 13834 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.401 seconds (process running for 1.755)
-2024-10-25T16:17:25.401+08:00 DEBUG 13834 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
+2024-11-05T12:07:59.448+08:00  INFO 16900 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.12 with PID 16900 (/Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp)
+2024-11-05T12:07:59.449+08:00  INFO 16900 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-11-05T12:07:59.468+08:00  INFO 16900 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-05T12:07:59.468+08:00  INFO 16900 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-05T12:07:59.890+08:00  INFO 16900 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 47 ms
+2024-11-05T12:08:00.133+08:00  INFO 16900 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-05T12:08:00.140+08:00  INFO 16900 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-05T12:08:00.140+08:00  INFO 16900 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-05T12:08:00.160+08:00  INFO 16900 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-05T12:08:00.161+08:00  INFO 16900 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2024-11-05T12:08:00.528+08:00  INFO 16900 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-05T12:08:00.534+08:00  INFO 16900 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2024-11-05T12:08:00.649+08:00  INFO 16900 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-05T12:08:00.679+08:00  INFO 16900 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.365 seconds (process running for 1.709)
+2024-11-05T12:08:00.689+08:00 DEBUG 16900 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
 ----------------------------------------------------------------------------------------------
 Order      Plugin Name                              Plugin Version                     Enabled
 ----------------------------------------------------------------------------------------------
-    1      Core                                     2023.1.0-M2                              Y
-    2      I18n                                     2023.1.0-M2                              Y
-    3      Codecs                                   2023.1.0-M2                              Y
-    4      GroovyPages                              2023.1.0-M2                              Y
+    1      Core                                     2023.1.0-M3                              Y
+    2      I18n                                     2023.1.0-M3                              Y
+    3      Codecs                                   2023.1.0-M3                              Y
+    4      GroovyPages                              2023.1.0-M3                              Y
 ----------------------------------------------------------------------------------------------
 
-2024-10-25T16:17:56.196+08:00  INFO 13834 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-25T16:17:56.196+08:00  INFO 13834 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-25T16:17:56.198+08:00  INFO 13834 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-05T12:08:21.450+08:00  INFO 16900 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-05T12:08:21.451+08:00  INFO 16900 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-05T12:08:21.452+08:00  INFO 16900 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ```
 
 then open your browser, `http://localhost:8080/greeting`
