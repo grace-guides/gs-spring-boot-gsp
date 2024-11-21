@@ -21,7 +21,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.graceframework:grace-boot'
 	implementation 'org.graceframework:grace-plugin-core'
-	implementation 'org.graceframework:grace-plugin-i18n'
 	implementation 'org.graceframework:grace-plugin-gsp'
 	implementation 'org.apache.groovy:groovy'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
