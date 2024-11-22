@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1><g:welcome/></h1>
-    <h3>Hello, <b>${name} from GSP!</h3>
+    <p>Hello, <b>${name}</b> from GSP!</p>
 </body>
 </html>
