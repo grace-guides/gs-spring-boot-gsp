@@ -11,7 +11,12 @@ class GreetingController {
 	@GetMapping("/greeting")
 	String index(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name)
-		return "/greeting/index"
+		return "greeting/index"
+	}
+
+	@GetMapping("/greeting/list")
+	String index() {
+		return "greeting/list"
 	}
 
 }

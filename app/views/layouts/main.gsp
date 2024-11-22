@@ -17,7 +17,11 @@
 
 <g:layoutBody/>
 
-<p>This is from the GSP layout: main.gsp</p>
+<p>
+<a href="/greeting/list">Using Groovy MarkupTemplate</a>
+</p>
+
+<h3>This is from the GSP layout: main.gsp</h3>
 
 </body>
 </html>
