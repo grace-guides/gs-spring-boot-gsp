@@ -1,9 +1,9 @@
 plugins {
-	id 'groovy'
-	id 'org.springframework.boot'
-	id 'io.spring.dependency-management'
-	id 'org.graceframework.grace-core'
-	id 'org.graceframework.grace-gsp'
+    id 'groovy'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'org.graceframework.grace-core'
+    id 'org.graceframework.grace-gsp'
 }
 
 ext['spring-boot.version'] = springBootVersion
@@ -13,28 +13,30 @@ group = 'org.graceframework.guides'
 version = projectVersion
 
 java {
-	sourceCompatibility = '17'
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.graceframework:grace-boot'
-	implementation 'org.graceframework:grace-plugin-core'
-	implementation 'org.graceframework:grace-plugin-gsp'
-	implementation 'org.apache.groovy:groovy'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.graceframework:grace-boot'
+    implementation 'org.graceframework:grace-plugin-core'
+    implementation 'org.graceframework:grace-plugin-gsp'
+    implementation 'org.apache.groovy:groovy'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 tasks.named('bootRun') {
-	jvmArgs('-Dspring.output.ansi.enabled=always')
+    jvmArgs('-Dspring.output.ansi.enabled=always')
 }
 
 tasks.named('bootJar') {
-	classpath "${project.buildDir}/gsp-classes"
+    classpath "${project.buildDir}/gsp-classes"
 }
