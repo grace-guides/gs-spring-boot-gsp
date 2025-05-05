@@ -3,8 +3,8 @@
 [![Grace on X](https://img.shields.io/twitter/follow/graceframework?style=social)](https://twitter.com/graceframework)
 
 [![Groovy Version](https://img.shields.io/badge/Groovy-4.0.26-blue?style=flat&color=4298b8)](https://groovy-lang.org/releasenotes/groovy-4.0.html)
-[![Grace Version](https://img.shields.io/badge/Grace-2023.3.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2023.3.0-M2)
-[![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-3.3.10-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases/tag/v3.3.10)
+[![Grace Version](https://img.shields.io/badge/Grace-2023.3.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2023.3.0-RC1)
+[![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-3.3.11-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases/tag/v3.3.11)
 
 
 # Spring Boot with GSP
@@ -13,8 +13,8 @@ This guide show you how to use GSP as view templates with Spring Boot.
 
 ## Versions
 
-* Spring Boot 3.3.10
-* Grace Framework 2023.3.0-M2
+* Spring Boot 3.3.11
+* Grace Framework 2023.3.0-RC1
 * Groovy 4.0.26
 
 ## Usage
@@ -101,29 +101,29 @@ gs-spring-boot-gsp  ./gradlew bootRun
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
 
- :: Spring Boot ::               (v3.3.10)
+ :: Spring Boot ::               (v3.3.11)
 
-2025-04-24T21:41:30.727+08:00  INFO 10251 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.14 with PID 10251 (/Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp)
-2025-04-24T21:41:30.728+08:00  INFO 10251 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-04-24T21:41:30.746+08:00  INFO 10251 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-04-24T21:41:30.746+08:00  INFO 10251 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-04-24T21:41:31.154+08:00  INFO 10251 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 3 plugins loaded successfully, take in 45 ms
-2025-04-24T21:41:31.376+08:00  INFO 10251 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-24T21:41:31.382+08:00  INFO 10251 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-24T21:41:31.382+08:00  INFO 10251 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-24T21:41:31.401+08:00  INFO 10251 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-24T21:41:31.401+08:00  INFO 10251 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
-2025-04-24T21:41:31.755+08:00  INFO 10251 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-04-24T21:41:31.762+08:00  INFO 10251 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
-2025-04-24T21:41:31.874+08:00  INFO 10251 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-24T21:41:31.901+08:00  INFO 10251 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.303 seconds (process running for 1.638)
-2025-04-24T21:41:31.911+08:00 DEBUG 10251 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
+2025-05-05T22:02:03.409+08:00  INFO 20955 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.15 with PID 20955 (/Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp)
+2025-05-05T22:02:03.410+08:00  INFO 20955 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-05T22:02:03.428+08:00  INFO 20955 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-05T22:02:03.428+08:00  INFO 20955 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-05T22:02:03.841+08:00  INFO 20955 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 3 plugins loaded successfully, take in 45 ms
+2025-05-05T22:02:04.066+08:00  INFO 20955 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-05T22:02:04.072+08:00  INFO 20955 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-05T22:02:04.072+08:00  INFO 20955 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-05T22:02:04.090+08:00  INFO 20955 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-05T22:02:04.091+08:00  INFO 20955 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 662 ms
+2025-05-05T22:02:04.447+08:00  INFO 20955 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-05T22:02:04.454+08:00  INFO 20955 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-05-05T22:02:04.567+08:00  INFO 20955 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-05T22:02:04.595+08:00  INFO 20955 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.316 seconds (process running for 1.649)
+2025-05-05T22:02:04.604+08:00 DEBUG 20955 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
 ----------------------------------------------------------------------------------------------------------
 Order      Plugin Name                        Plugin Version                                       Enabled
 ----------------------------------------------------------------------------------------------------------
-    1      Core                               2023.3.0-M2                                                Y
-    2      Codecs                             2023.3.0-M2                                                Y
-    3      GroovyPages                        2023.3.0-M2                                                Y
+    1      Core                               2023.3.0-RC1                                               Y
+    2      Codecs                             2023.3.0-RC1                                               Y
+    3      GroovyPages                        2023.3.0-RC1                                               Y
 ----------------------------------------------------------------------------------------------------------
 ```
 
