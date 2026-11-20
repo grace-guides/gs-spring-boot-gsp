@@ -2,9 +2,9 @@
 [![Apache 2.0 license](https://img.shields.io/badge/License-APACHE%202.0-green.svg?logo=APACHE&style=flat)](https://opensource.org/licenses/Apache-2.0)
 [![Grace on X](https://img.shields.io/twitter/follow/graceframework?style=social)](https://twitter.com/graceframework)
 
-[![Groovy Version](https://img.shields.io/badge/Groovy-4.0.33-blue?style=flat&color=4298b8)](https://groovy-lang.org/releasenotes/groovy-4.0.html)
-[![Grace Version](https://img.shields.io/badge/Grace-2024.2.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2024.2.0)
-[![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-3.5.16-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases/tag/v3.5.16)
+[![Groovy Version](https://img.shields.io/badge/Groovy-5.0.8-blue?style=flat&color=4298b8)](https://groovy-lang.org/releasenotes/groovy-5.0.html)
+[![Grace Version](https://img.shields.io/badge/Grace-2025.0.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2025.0.0-M3)
+[![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-4.0.9-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases/tag/v4.0.9)
 
 
 # Spring Boot with GSP
@@ -13,9 +13,9 @@ This guide show you how to use GSP as view templates with Spring Boot.
 
 ## Versions
 
-* Spring Boot 3.5.16
-* Grace Framework 2024.2.0
-* Groovy 4.0.33
+* Spring Boot 4.0.9
+* Grace Framework 2025.0.0-M3
+* Groovy 5.0.8
 
 ## Usage
 
@@ -25,9 +25,9 @@ Adding `grace-plugin-gsp` plugin to the `build.gradle`,
 
 ```gradle
 dependencies {
-	implementation 'org.graceframework:grace-boot'
-	implementation 'org.graceframework:grace-plugin-core'
-	implementation 'org.graceframework:grace-plugin-gsp'
+    implementation 'org.graceframework:grace-boot'
+    implementation 'org.graceframework:grace-plugin-core'
+    implementation 'org.graceframework:grace-plugin-gsp'
 }
 ```
 
@@ -40,11 +40,11 @@ A `View` is responsible for rendering the HTML content. The implementation of th
 @Controller
 class GreetingController {
 
-	@GetMapping("/greeting")
-	String index(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		model.addAttribute("name", name)
-		return "greeting/index"
-	}
+    @GetMapping("/greeting")
+    String index(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name)
+        return "greeting/index"
+    }
 
 }
 ```
@@ -101,31 +101,33 @@ gs-spring-boot-gsp  ./gradlew bootRun
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
 
- :: Spring Boot ::               (v3.5.16)
+ :: Spring Boot ::                (v4.0.9)
 
-2026-11-20T16:54:16.141+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.20 with PID 11053 (/Users/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/grace/grace-guides/gs-spring-boot-gsp)
-2026-11-20T16:54:16.142+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-11-20T16:54:16.161+08:00  INFO 11053 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-11-20T16:54:16.161+08:00  INFO 11053 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-11-20T16:54:16.632+08:00  INFO 11053 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 73 ms
-2026-11-20T16:54:16.838+08:00  INFO 11053 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-11-20T16:54:16.847+08:00  INFO 11053 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-11-20T16:54:16.847+08:00  INFO 11053 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.61]
-2026-11-20T16:54:16.863+08:00  INFO 11053 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-11-20T16:54:16.863+08:00  INFO 11053 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
-2026-11-20T16:54:17.232+08:00  INFO 11053 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-11-20T16:54:17.238+08:00  INFO 11053 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
-2026-11-20T16:54:17.353+08:00  INFO 11053 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-11-20T16:54:17.383+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.391 seconds (process running for 1.714)
-2026-11-20T16:54:17.388+08:00 DEBUG 11053 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
+2026-11-20T17:15:33.800+08:00  INFO 15029 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.20 with PID 15029 (/Users/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/grace/grace-guides/gs-spring-boot-gsp)
+2026-11-20T17:15:33.801+08:00  INFO 15029 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-20T17:15:33.835+08:00  INFO 15029 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-20T17:15:33.835+08:00  INFO 15029 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-20T17:15:34.337+08:00  INFO 15029 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 78 ms
+2026-11-20T17:15:34.571+08:00  INFO 15029 --- [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-20T17:15:34.579+08:00  INFO 15029 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-20T17:15:34.579+08:00  INFO 15029 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-20T17:15:34.596+08:00  INFO 15029 --- [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 761 ms
+2026-11-20T17:15:35.038+08:00  INFO 15029 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-11-20T17:15:35.212+08:00  INFO 15029 --- [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-20T17:15:35.243+08:00  INFO 15029 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.622 seconds (process running for 1.964)
+2026-11-20T17:15:35.248+08:00 DEBUG 15029 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
 ----------------------------------------------------------------------------------------------------------
 Order      Plugin Name                        Plugin Version                                       Enabled
 ----------------------------------------------------------------------------------------------------------
-    1      Core                               2024.2.0                                                   Y
-    2      Codecs                             2024.2.0                                                   Y
-    3      GroovyPages                        2024.2.0                                                   Y
-    4      Taglibs                            2024.2.0                                                   Y
+    1      Core                               2025.0.0-M3                                                Y
+    2      Codecs                             2025.0.0-M3                                                Y
+    3      GroovyPages                        2025.0.0-M3                                                Y
+    4      Taglibs                            2025.0.0-M3                                                Y
 ----------------------------------------------------------------------------------------------------------
+
+2026-11-20T17:16:29.784+08:00  INFO 15029 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-20T17:16:29.785+08:00  INFO 15029 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-20T17:16:29.786+08:00  INFO 15029 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ```
 
 then open your browser, `http://localhost:8080/greeting`
