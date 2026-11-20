@@ -3,7 +3,7 @@
 [![Grace on X](https://img.shields.io/twitter/follow/graceframework?style=social)](https://twitter.com/graceframework)
 
 [![Groovy Version](https://img.shields.io/badge/Groovy-4.0.33-blue?style=flat&color=4298b8)](https://groovy-lang.org/releasenotes/groovy-4.0.html)
-[![Grace Version](https://img.shields.io/badge/Grace-2024.1.2-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2024.1.2)
+[![Grace Version](https://img.shields.io/badge/Grace-2024.2.0-blue?style=flat&color=f49b06)](https://github.com/graceframework/grace-framework/releases/tag/v2024.2.0)
 [![Spring Boot Version](https://img.shields.io/badge/Spring_Boot-3.5.16-blue?style=flat&color=6db33f)](https://github.com/spring-projects/spring-boot/releases/tag/v3.5.16)
 
 
@@ -14,7 +14,7 @@ This guide show you how to use GSP as view templates with Spring Boot.
 ## Versions
 
 * Spring Boot 3.5.16
-* Grace Framework 2024.1.2
+* Grace Framework 2024.2.0
 * Groovy 4.0.33
 
 ## Usage
@@ -103,28 +103,28 @@ gs-spring-boot-gsp  ./gradlew bootRun
 
  :: Spring Boot ::               (v3.5.16)
 
-2026-08-30T23:46:37.119+08:00  INFO 86918 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.20 with PID 86918 (/Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/rain/Development/github/grace/grace-guides/gs-spring-boot-gsp)
-2026-08-30T23:46:37.120+08:00  INFO 86918 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-08-30T23:46:37.138+08:00  INFO 86918 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-08-30T23:46:37.138+08:00  INFO 86918 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-08-30T23:46:37.596+08:00  INFO 86918 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 69 ms
-2026-08-30T23:46:37.794+08:00  INFO 86918 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-08-30T23:46:37.801+08:00  INFO 86918 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-08-30T23:46:37.801+08:00  INFO 86918 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.57]
-2026-08-30T23:46:37.817+08:00  INFO 86918 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-08-30T23:46:37.818+08:00  INFO 86918 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 679 ms
-2026-08-30T23:46:38.197+08:00  INFO 86918 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-08-30T23:46:38.204+08:00  INFO 86918 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
-2026-08-30T23:46:38.317+08:00  INFO 86918 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-08-30T23:46:38.345+08:00  INFO 86918 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.368 seconds (process running for 1.694)
-2026-08-30T23:46:38.349+08:00 DEBUG 86918 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
+2026-11-20T16:54:16.141+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : Starting GraceBootApplication using Java 17.0.20 with PID 11053 (/Users/grace/grace-guides/gs-spring-boot-gsp/build/classes/groovy/main started by rain in /Users/grace/grace-guides/gs-spring-boot-gsp)
+2026-11-20T16:54:16.142+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-20T16:54:16.161+08:00  INFO 11053 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-20T16:54:16.161+08:00  INFO 11053 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-20T16:54:16.632+08:00  INFO 11053 --- [  restartedMain] g.plugins.DefaultGrailsPluginManager     : Total 4 plugins loaded successfully, take in 73 ms
+2026-11-20T16:54:16.838+08:00  INFO 11053 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-20T16:54:16.847+08:00  INFO 11053 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-20T16:54:16.847+08:00  INFO 11053 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.61]
+2026-11-20T16:54:16.863+08:00  INFO 11053 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-20T16:54:16.863+08:00  INFO 11053 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2026-11-20T16:54:17.232+08:00  INFO 11053 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-11-20T16:54:17.238+08:00  INFO 11053 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2026-11-20T16:54:17.353+08:00  INFO 11053 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-20T16:54:17.383+08:00  INFO 11053 --- [  restartedMain] grace.guides.GraceBootApplication        : Started GraceBootApplication in 1.391 seconds (process running for 1.714)
+2026-11-20T16:54:17.388+08:00 DEBUG 11053 --- [  restartedMain] PluginsInfoApplicationContextInitializer :
 ----------------------------------------------------------------------------------------------------------
 Order      Plugin Name                        Plugin Version                                       Enabled
 ----------------------------------------------------------------------------------------------------------
-    1      Core                               2024.1.2                                                   Y
-    2      Codecs                             2024.1.2                                                   Y
-    3      GroovyPages                        2024.1.2                                                   Y
-    4      Taglibs                            2024.1.2                                                   Y
+    1      Core                               2024.2.0                                                   Y
+    2      Codecs                             2024.2.0                                                   Y
+    3      GroovyPages                        2024.2.0                                                   Y
+    4      Taglibs                            2024.2.0                                                   Y
 ----------------------------------------------------------------------------------------------------------
 ```
 
