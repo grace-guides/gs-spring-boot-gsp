@@ -25,6 +25,7 @@ dependencies {
     implementation 'org.graceframework:grace-boot'
     implementation 'org.graceframework:grace-plugin-core'
     implementation 'org.graceframework:grace-plugin-gsp'
+    implementation 'org.graceframework.views:grace-views-groovy-templates'
     implementation 'org.apache.groovy:groovy'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -32,6 +33,18 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.register("copyGraceViews", Copy) {
+    includeEmptyDirs = false
+    from("app/views") {
+        include "**/*.tpl"
+    }
+    into("build/resources/main/views")
+}
+
+processResources {
+    dependsOn = ["copyGraceViews"]
 }
 
 tasks.named('bootRun') {
